@@ -1,7 +1,0 @@
-package com.snowy.catsfacts
-
-interface Platform {
-    val name: String
-}
-
-expect fun getPlatform(): Platform

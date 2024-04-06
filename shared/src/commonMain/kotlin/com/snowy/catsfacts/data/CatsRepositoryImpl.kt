@@ -9,7 +9,7 @@ import kotlinx.coroutines.withContext
 class CatsRepositoryImpl: CatsRepository {
     private val apiComponent = ApiComponent()
 
-    suspend override fun getCatsFacts() = withContext(Dispatchers.IO){
+    override suspend fun getCatsFacts() = withContext(Dispatchers.IO){
         apiComponent.getData().map {
             it.mapToDomainModel()
         }
